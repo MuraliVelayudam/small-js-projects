@@ -1,0 +1,133 @@
+body {
+  margin: 0px;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: url("https://images.unsplash.com/photo-1673100749940-d9a899cb3968?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80");
+  background-size: cover;
+  text-align: center;
+  transition: filter 0.7s;
+}
+
+.main-container h1 {
+  color: white;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 60px;
+  text-shadow: 3px 3px 8px lightslategray;
+}
+
+.btn {
+  padding: 10px 12px;
+  border: none;
+  background-color: rgb(63, 126, 91);
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn::before {
+  content: "";
+  position: absolute;
+  background-color: white;
+  width: 0px;
+  height: 0px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  left: var(--xPos);
+  top: var(--yPos);
+  transition: width 0.8s,height 0.8s;
+}
+
+.btn:hover::before {
+  width: 300px;
+  height: 300px;
+}
+.btn span {
+  z-index: 1;
+  position: relative;
+  color: black;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.active.main-container{
+filter: blur(5px) brightness(.7);
+}
+
+.popup-container {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  background-color: white;
+  width: 500px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  transform: translate(-50%);
+  padding: 20px;
+  background: url("https://images.unsplash.com/photo-1487700160041-babef9c3cb55?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=852&q=80");
+  background-size:cover;
+  border-radius: 20px;
+  box-shadow: 0px 4px 8px rgba(255, 255, 255,0.3);
+  opacity: 1;
+  transition: all 0.7s;
+}
+
+h4 {
+font-family: sans-serif;
+font-size: 30px;
+margin: 15px 0px;
+color: rgb(17, 98, 17);
+}
+
+label{
+  color: rgb(17, 98, 17);
+  font-family: sans-serif;
+}
+
+.btn-join{
+  background-color: rgb(17, 98, 17);
+  font-family: sans-serif;
+  color: white;
+  border: 2px solid black;
+  padding: 7px 0px;
+  font-size: 15px;
+}
+.btn-join:hover{
+  filter: brightness(1.2);
+  cursor: pointer;
+}
+input {
+  padding: 10px 0px;
+  border: 2px solid black;
+  margin: 15px 0px;
+  text-align: center;
+
+}
+input::placeholder{
+  font-family: sans-serif;
+  font-size: 15px;
+  color: grey;
+}
+.close {
+  position: absolute;
+  top: 9%;
+  left: 90%;
+  cursor: pointer;
+}
+.close:hover{
+  color: rgb(17, 98, 17);
+}
+
+.active.popup-container{
+  visibility: hidden;
+  opacity: 0;
+  top: 10%;
+}

@@ -1,0 +1,10 @@
+{
+    "editor.fontFamily": "sans serif",
+    "editor.fontSize": 16,
+    "files.autoSave": "off",
+    "editor.cursorStyle": "line-thin",
+    "editor.wordWrap": "on",
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    "editor.guides.bracketPairs": true,
+    "editor.guides.bracketPairsHorizontal": true
+}

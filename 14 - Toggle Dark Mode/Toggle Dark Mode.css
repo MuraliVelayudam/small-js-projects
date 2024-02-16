@@ -1,0 +1,64 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: sans-serif;
+  transition: .4s;
+}
+
+.head {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 20%);
+}
+
+.label {
+  width: 80px;
+  height: 40px;
+  background-color: lightgrey;
+  position: absolute;
+  border-radius: 20px;
+  cursor: pointer;
+  border: 2px black solid;
+}
+.circle {
+  position: absolute;
+  background-color: white;
+  width: 34px;
+  height: 34px;
+  left: 3px;
+  top: 3px;
+  border-radius: 50%;
+  animation: toggleOff 0.4s forwards;
+}
+.input:checked + .label {
+  background-color: white;
+  border: 1px white solid;
+}
+
+.input:checked + .label .circle {
+  animation: toggleOn 0.4s forwards;
+  background-color: black;
+}
+
+@keyframes toggleOn {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(40px);
+  }
+}
+
+@keyframes toggleOff {
+  0% {
+    transform: translateX(40px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
